@@ -1,13 +1,28 @@
 body {
+  position: relative; 
+  padding-top: 10px;
   font-family: Arial, sans-serif;
   margin: 40px;
   background-color: #f0f4f8; 
+  
+}
+#usfLogo {
+  position: absolute;
+  top: 20px; 
+  right: 20px; 
+  width: 200px; 
+  mix-blend-mode: multiply;
+  z-index: 10; 
 }
 
 h1 {
+  position: relative; 
+  left: 20px; 
   color: #006747; 
   margin-bottom: 20px; 
 }
+
+
 
 form {
   background: #ffffff; 

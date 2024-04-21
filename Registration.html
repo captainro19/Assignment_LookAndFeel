@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
+    <img src="img/sc.png" alt="USF Health Logo" id="usfLogo">
     <h1>COVID Vaccine Registration</h1>
     <form id="registrationForm">
-        <label for="patientName">Patient Name:</label>
-        <input type="text" id="patientName" name="patientName" pattern="[A-Za-z\s]+" title="Name should only contain alphabets and spaces." required onblur="validateInput(this, 'email')" placeholder="Should have alphabets and spaces ">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]+" title="First name should only contain alphabets and spaces." required onblur="validateInput(this, 'lastName')" placeholder="Enter first name">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" pattern="[A-Za-z\s]+" title="Last name should only contain alphabets and spaces." required onblur="validateInput(this, 'email')" placeholder="Enter last name">
 
         <label for="email">Email ID:</label>
-        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.com)$" title="Please enter a valid email address." oninput="softValidate(this)" onblur="validateInput(this, 'phone')"  placeholder="Should have @">
+        <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.com)$" title="Please enter a valid email address ending with .com." oninput="softValidate(this)" onblur="validateInput(this, 'phone')"  placeholder="Should end with .com">
 
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone" pattern="(\+\d{2})?\d{10}" title="Enter a 10-digit phone number or a country code followed by a 10-digit number." maxlength="13" required onblur="validateInput(this, 'address')" placeholder="e.g., +XX1234567890 or 1234567890">
@@ -32,7 +36,7 @@
         <label for="timeSlot">Time Slot:</label>
         <input type="time" id="timeSlot" name="timeSlot" required onblur="validateInput(this, 'registerButton')">
 
-        <button type="button" id="registerButton" onclick="validateForm()" disabled>Register</button>
+        <button type="button" id="registerButton" onclick="validateForm()">Register</button>
     </form>
 
     <div id="result"></div>
