@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #006747;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This spreads out the logo and the title */
+    padding: 20px;
+    background-color: #CFC493;
+}
+
+.logo {
+    height: 60px; /* Adjust height as needed */
+    margin-right: 20px; /* Adds some space between the logo and the title */
+}
+
+.header-content {
+    flex-grow: 1; /* This will make the title and paragraph take up the remaining space */
+    text-align: center;
+}
+
+/* Clear any default margins from the h1 and p tags */
+header h1, header p {
+    margin: 0;
+}
+
+
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Clear float style */
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.member {
+    background-color: #CFC493;
+    border: 2px solid #006747;
+    padding: 10px;
+    margin: 10px;
+    width: 220px;
+    text-align: center;
+}
+
+.member img {
+    width: 80%;
+    height: auto;
+    border-radius: 25%;
+}
+
+footer {
+    background-color: #006747;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer a img {
+    width: 32px;
+    height: auto;
+}
+
+a {
+    color: #006747;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    /* Other styles remain the same */
+    line-height: 32px; /* Aligns text with the GitHub icon vertically */
+}
+
+.footer-desc {
+    display: inline-block;
+    margin-right: 10px;
+    color: #FFFFFF; /* Text color */
+}
+
+/* Update this to ensure the GitHub icon aligns with the text */
+footer a img {
+    vertical-align: middle; /* Aligns the icon with the text */
+}
